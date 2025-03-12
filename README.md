@@ -16,4 +16,4 @@ When no life is remaining, we're took back to the main page.
 
 ## Icon
 As baltoslav.eu is all rights reserved, I cannot use its favicon.  
-Instead, I used https://www.flaticon.com/free-icon/languages_3898840?term=language&page=1&position=9&origin=tag&related_id=3898840
+Instead, I used [this icon](https://www.flaticon.com/free-icon/languages_3898840?term=language&page=1&position=9&origin=tag&related_id=3898840).
