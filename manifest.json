@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Better Guess The Language - Baltoslav.eu",
+    "version": "1.0",
+
+    "description": "Adds many game modes and useful information on baltoslav.eu's 'Guess The Language' game.",
+    "icons": {
+        "48": "icons/icon48.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://baltoslav.eu/adhadaj/*"],
+            "js": ["main.js"]
+        }
+    ]
+}
