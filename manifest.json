@@ -2,16 +2,31 @@
     "manifest_version": 2,
     "name": "Better Guess The Language - Baltoslav.eu",
     "version": "1.0",
-
+    "homepage_url": "https://github.com/Chi-Iroh/Better-Guess-The-Language-Baltoslav.eu",
     "description": "Adds many game modes and useful information on baltoslav.eu's 'Guess The Language' game.",
     "icons": {
         "48": "icons/icon48.png"
     },
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "addon@example.com",
+            "strict_min_version": "58.0"
+        }
+    },
+    "permissions": ["storage"],
 
     "content_scripts": [
         {
             "matches": ["*://baltoslav.eu/adhadaj/*"],
             "js": ["main.js"]
         }
-    ]
+    ],
+    "background": {
+        "scripts": ["settings.js", "log.js"]
+    },
+
+    "browser_action": {
+        "default_popup": "settings.html"
+    }
 }
