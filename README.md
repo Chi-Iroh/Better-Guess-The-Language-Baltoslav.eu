@@ -13,6 +13,7 @@ When no life is remaining, we're took back to the main page.
 - Adding a way to customize the table timeout
 - A help text when we lose a point to explain why we lost (wrong writing system, that character doesn't exist in the language you chose etc..)
 - Speedrun mode : adds a timer to show how much time was spent since the beginning
+- Replacing language buttons (limited choices) by a search bar where we must write and select the language (no help)
 
 ## Icon
 As baltoslav.eu is all rights reserved, I cannot use its favicon.  
