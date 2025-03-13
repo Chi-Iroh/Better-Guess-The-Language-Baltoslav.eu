@@ -3,6 +3,7 @@
     "name": "Better Guess The Language - Baltoslav.eu",
     "version": "1.0",
 
+    "homepage_url": "https://github.com/Chi-Iroh/Better-Guess-The-Language-Baltoslav.eu",
     "description": "Adds many game modes and useful information on baltoslav.eu's 'Guess The Language' game.",
     "icons": {
         "48": "icons/icon48.png"
