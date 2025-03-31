@@ -12,7 +12,7 @@
     "content_scripts": [
         {
             "matches": ["*://baltoslav.eu/adhadaj/*"],
-            "js": ["main.js"]
+            "js": ["main.js", "languages.js"]
         }
     ]
 }
