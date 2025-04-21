@@ -11,8 +11,11 @@
 
     "content_scripts": [
         {
-            "matches": ["*://baltoslav.eu/adhadaj/*"],
-            "js": ["main.js", "languages.js"]
+            "matches": [
+                "http://baltoslav.eu/adhadaj/*",
+                "https://baltoslav.eu/adhadaj/*"
+            ],
+            "js": ["languages.js", "content.js"]
         }
     ]
 }
