@@ -222,9 +222,19 @@ const specialCharacters = new Map([
 
 var allSpecialCharacters = [];
 
+// split a string according to UTF-8 characters
+// Ex: Guarani's g with tilde is a g plus a tilde, thus a for ... of reads a g then a tilde
+// https://stackoverflow.com/questions/68602529/javascript-iterate-over-unicode-when-emoji-has-a-skincolor
+const graphemeSplit = str => {
+    // undefined locale, as we deal with every language
+    const segmenter = new Intl.Segmenter(undefined, {granularity: 'grapheme'});
+    const segitr = segmenter.segment(str);
+    return Array.from(segitr, ({segment}) => segment);
+}
+
 function initSpecialCharacters() {
     for (const [language, _specialCharacters] of specialCharacters.entries()) {
-        for (const char of _specialCharacters) {
+        for (const char of graphemeSplit(_specialCharacters)) {
             if (!allSpecialCharacters.includes(char)) {
                 allSpecialCharacters.push(char);
                 console.log(`${language} adds special character '${char}'`);
