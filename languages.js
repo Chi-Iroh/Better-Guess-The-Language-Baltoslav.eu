@@ -78,7 +78,7 @@ const writingSystems = new Map([
 
         "Portuguese",
         "Czech",
-        "Slovenian",
+        "Slovene",
         "Slovak",
 
         "Polish",
