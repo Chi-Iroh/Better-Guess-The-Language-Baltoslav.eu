@@ -8,14 +8,6 @@ function isOnLossPage() { // wheen we lose a point, the correct answer and its w
 
 console.log("hello")
 
-let settingsButton = document.createElement("button");
-settingsButton.innerText = "Open settings";
-settingsButton.addEventListener("click", event => {
-    event.preventDefault();
-    browser.runtime.sendMessage({ "action": "openSettings" });
-});
-document.querySelector(".pojemnik").appendChild(settingsButton);
-
 function hide(timeout) {
     console.log(`Timeout: ${timeout}ms`)
     if (isOnLossPage()) {
