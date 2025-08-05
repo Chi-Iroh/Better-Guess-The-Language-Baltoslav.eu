@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="color-scheme" content="dark light"> <!-- Enables switching to dark theme -->
+    </head>
+    <body>
+        <h1>Better Guess The Language - Baltoslav.eu</h1>
+        <h2>Settings</h2>
+        <form>
+            <fieldset>
+                <legend>Words disappear after</legend>
+                <label> <input type="radio" value=100 name="timeout" id="0.1s">                 0.1 second  </label> <br>
+                <label> <input type="radio" value=200 name="timeout" id="0.2s">                 0.2 second  </label> <br>
+                <label> <input type="radio" value=500 name="timeout" id="0.5s">                 0.5 second  </label> <br>
+                <label> <input type="radio" value=1000 name="timeout" id="1s">                  1 second    </label> <br>
+                <label> <input type="radio" value=2000 name="timeout" id="2s">                  2 seconds   </label> <br>
+                <label> <input type="radio" value=5000 name="timeout" id="5s">                  5 seconds   </label> <br>
+                <label> <input type="radio" value=10000 name="timeout" id="10s">                10 seconds  </label> <br>
+                <label> <input type="radio" value=15000 name="timeout" id="15s">                15 seconds  </label> <br>
+                <label> <input type="radio" value=30000 name="timeout" id="30s">                30 seconds  </label> <br>
+                <label> <input type="radio" value="No timeout" name="timeout" id="no-timeout">  No timeout  </label> <br>
+            </fieldset>
+            <button type="submit" id="settings-form">Save</button>
+        </form>
+        <p id="debug"></p>
+        <script src="saveSettings.js"></script>
+    </body>
+</html>

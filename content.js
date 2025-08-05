@@ -7,12 +7,31 @@ function isOnLossPage() { // wheen we lose a point, the correct answer and its w
 }
 
 console.log("hello")
-if (isOnLossPage()) {
-    window.displayHint(); // languages.js
-} else if (!isOnMainPage() && !isOnLossPage()) {
-    const table = document.querySelector("table");
-    setTimeout(() => {
-        table.style.opacity = "0"; // still displayed but invisible, to avoid below buttons to move up
-        table.style.pointerEvents = "none"; // disables any interactions with the mouse pointer
-    }, 1000); // disappear after one second
+
+function hide(timeout) {
+    console.log(`Timeout: ${timeout}ms`)
+    if (isOnLossPage()) {
+        window.displayHint(); // languages.js
+    } else if (!isOnMainPage() && !isOnLossPage()) {
+        const table = document.querySelector("table");
+        setTimeout(() => {
+            table.style.opacity = "0"; // still displayed but invisible, to avoid below buttons to move up
+            table.style.pointerEvents = "none"; // disables any interactions with the mouse pointer
+        }, timeout); // disappear after one second
+    }
 }
+
+browser.storage.local.get("timeout").then(
+    timeout => {
+        if (timeout.timeout === undefined) {
+            browser.storage.local.set({ timeout: 2000 }).then(
+                _ => {
+                    console.log("Timeout reset to default");
+                    hide(2000);
+                }
+            )
+        } else {
+            hide(timeout.timeout)
+        }
+    }
+);
