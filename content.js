@@ -6,7 +6,16 @@ function isOnLossPage() { // wheen we lose a point, the correct answer and its w
     return document.getElementsByClassName("prawy ziel").length > 0; // prawy ziel and prawy czer classes only appear when we just lost a point
 }
 
-console.log("hello")
+let startTime = Date.now();
+let timer = document.createElement('p');
+timer.innerText = ((startTime - startTime) / 1000).toFixed(3);
+timer.id = "timer";
+document.querySelector(".pojemnik").appendChild(timer);
+
+setInterval(function() {
+    const elapsedTime = Date.now() - startTime;
+    timer.innerText = `${(elapsedTime / 1000).toFixed(3)} s`;
+}, 100);
 
 function hide(timeout) {
     console.log(`Timeout: ${timeout}ms`)
