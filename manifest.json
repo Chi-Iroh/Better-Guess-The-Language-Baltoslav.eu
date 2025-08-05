@@ -23,6 +23,10 @@
         "page": "settings.html"
     },
 
+    "background": {
+        "scripts": ["background.js"]
+    },
+
     "permissions": ["storage"],
 
     "browser_specific_settings": {
