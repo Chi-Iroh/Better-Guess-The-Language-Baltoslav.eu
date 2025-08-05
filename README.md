@@ -7,7 +7,7 @@ We have 3 lives, and each error removes one life and shows us the words table wi
 When no life is remaining, we're took back to the main page.  
 
 ## Features
-- Table timeout : The words table automatically disappears after 1 second (not when we lose)
+- Table timeout : The words table automatically disappears after a certain time (default is 2 seconds, can be changed in settings)
 
 ## Features (planned)
 - Adding a way to customize the table timeout
